@@ -53,12 +53,18 @@ function iteratorWithTime(iterable, time){
 //Приклад виклику
 
 // iterable = fibonacciNumber();
-iterable = randomNumber();
+// iterable = randomNumber();
 
-iterator = iteratorWithTime(iterable,1);
+// iterator = iteratorWithTime(iterable,1);
 
-console.log(iterator)
-console.log(numFiboNum)
+// console.log(iterator)
+// console.log(numFiboNum)
 
 //Мені не подобається що воно видає просто інфініті. 
 //Можна перетворити числа в BigInt, але прошавай пам'ять
+
+module.exports = {
+    iteratorWithTime,
+    fibonacciNumber,
+    randomNumber,
+};

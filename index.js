@@ -1,8 +1,8 @@
 const myLib = require('generetor-iterator');
 
-// iterable = randomNumber();
+iterable = myLib.randomNumber();
 
-iterator = iteratorWithTime(iterable,1);
+iterator = myLib.iteratorWithTime(iterable,1);
 
 console.log(iterator)
 console.log(numFiboNum)
