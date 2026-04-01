@@ -1,26 +1,5 @@
 
-numFiboNum = 0;
 
-function* fibonacciNumber(maxRange, endTime = Date.now() + 5000){
-    let counter = 0;
-    let firstTerm = 0n;
-    let secondTerm = 1n;
-    while(Date.now() <= endTime || counter < maxRange){
-        yield firstTerm;
-        let result = firstTerm + secondTerm;
-        firstTerm = secondTerm;
-        secondTerm = result;  
-        counter += 1;
-        numFiboNum += 1;
-    }
-}
-
-// Не дуже рандомно
-function* randomNumber(minRange = -10000, maxRange = 10000){
-    while(true){
-        yield Math.trunc(Math.random() * (maxRange - minRange) + minRange);
-    }
-}
 
 // Для тесту Перевірка
 // console.log([
@@ -31,24 +10,7 @@ function* randomNumber(minRange = -10000, maxRange = 10000){
 //     console.log(num); 
 // } 
 
-function iteratorWithTime(iterable, time){
-    
-    let list = [];
-    let sum = 0n;
-    const finishTime = Date.now() + (time*1000);
 
-    while(Date.now() < finishTime){
-        curent = iterable.next();
-        console.log(curent.value);
-        sum += BigInt(curent.value);
-        list.push(curent.value)
-    }
-    return{
-        sum: sum,
-        averageNum: sum / BigInt(list.length),
-        list: list.length
-    }
-}
 
 //Приклад виклику
 
@@ -62,6 +24,13 @@ function iteratorWithTime(iterable, time){
 
 //Мені не подобається що воно видає просто інфініті. 
 //Можна перетворити числа в BigInt, але прошавай пам'ять
+
+const { randomNumber, fibonacciNumber } = require('./generators.js');
+const { iteratorWithTime } = require('./iterator.js');
+
+// 2. Экспортируем всё вместе для тех, кто скачает нашу библиотеку
+
+
 
 module.exports = {
     iteratorWithTime,
