@@ -1,0 +1,11 @@
+{
+  "name": "generetor-iterator",
+  "version": "1.0.0",
+  "description": "Генератори та ітератори з 1 лаби",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Platon Savchenko",
+  "license": "ISC"
+}

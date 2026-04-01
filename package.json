@@ -1,0 +1,14 @@
+{
+  "name": "2-lab",
+  "version": "0.0.1",
+  "description": "2 лабораторна робота",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcomand"
+  },
+  "author": "Platon Savchenko",
+  "license": "ISC",
+  "dependencies": {
+    "generetor-iterator": "file:package"
+  }
+}
